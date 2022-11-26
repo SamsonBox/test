@@ -39,14 +39,6 @@ input.onGesture(Gesture.Shake, function () {
             . . . . .
             . . . . .
             `)
-        basic.pause(500)
-        basic.showLeds(`
-            . . . . .
-            . . . . .
-            . . . . .
-            . . . . .
-            . . . . .
-            `)
     } else if (zahl == 2) {
         basic.showLeds(`
             . . # . .
@@ -54,14 +46,6 @@ input.onGesture(Gesture.Shake, function () {
             . . . . .
             . . . . .
             . . # . .
-            `)
-        basic.pause(500)
-        basic.showLeds(`
-            . # # . .
-            # . . # .
-            . . # . .
-            . # . . .
-            # # # # .
             `)
     } else if (zahl == 3) {
         basic.showLeds(`
@@ -71,14 +55,6 @@ input.onGesture(Gesture.Shake, function () {
             . . . . .
             . . . . #
             `)
-        basic.pause(500)
-        basic.showLeds(`
-            # # # . .
-            . . # . .
-            . # . . .
-            . . # . .
-            # # . . .
-            `)
     } else if (zahl == 4) {
         basic.showLeds(`
             # . . . #
@@ -86,14 +62,6 @@ input.onGesture(Gesture.Shake, function () {
             . . . . .
             . . . . .
             # . . . #
-            `)
-        basic.pause(500)
-        basic.showLeds(`
-            # . . . .
-            # . # . .
-            # # # . .
-            . . # . .
-            . . # . .
             `)
     } else if (zahl == 5) {
         basic.showLeds(`
@@ -111,5 +79,12 @@ input.onGesture(Gesture.Shake, function () {
             . . . . .
             # . # . #
             `)
+    }
+    basic.pause(500)
+    basic.showNumber(zahl)
+})
+basic.forever(function () {
+    for (let Index = 0; Index <= 255; Index++) {
+        basic.setLedColor(basic.rgb(10, 0, 0))
     }
 })
